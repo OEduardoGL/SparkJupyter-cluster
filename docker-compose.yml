@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  pyspark:
+    build: .
+    container_name: pyspark_container
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "4040:4040"   # Spark UI
+    volumes:
+      - ./workspace:/workspace
